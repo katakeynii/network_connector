@@ -34,7 +34,13 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
-
+  spec.add_dependency  "open-uri" 
+  spec.add_dependency  "watir"
+  spec.add_dependency  "webdrivers"
+  spec.add_dependency  "dotenv/load"
+  spec.add_dependency  "net-ping"
+  spec.add_dependency  "colorize"
+  spec.add_dependency  "net/ping"
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 end
