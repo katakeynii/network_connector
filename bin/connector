@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'network_connector'
+NetworkConnector.start
