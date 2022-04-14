@@ -30,8 +30,8 @@ module NetworkConnector
 
     def start
       @@connected = has_internet?
-      puts @@connected
-      unless !@@connected
+
+      unless @@connected
         @@tries -= 1
         connect
         if @@tries.eql?(0)
@@ -50,7 +50,7 @@ module NetworkConnector
     end
 
     def has_internet?
-      Net::Ping::TCP.new("google.com", 'http')
+      Net::Ping::TCP.new("google.com", 'http').ping?
     end
   
     def connect
