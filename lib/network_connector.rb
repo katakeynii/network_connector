@@ -57,7 +57,7 @@ module NetworkConnector
       begin
         url = ENV["HOST"]
         browser = Watir::Browser.new :safari
-        browser.goto(url)
+        browser.goto(url)git 
         browser.send_keys :enter
       
         credentials = [
