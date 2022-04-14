@@ -29,9 +29,8 @@ module NetworkConnector
     end
 
     def start
-      puts "USERNAME"
-      puts ENV['USERNAME']
       @@connected = has_internet?
+      puts @@connected
       unless !@@connected
         @@tries -= 1
         connect
@@ -62,8 +61,8 @@ module NetworkConnector
         browser.send_keys :enter
       
         credentials = [
-            {path: {id: "user.username"}, value: ENV["USERNAME"]},
-            {path: {id: "user.password"}, value: ENV["PASSWORD"]}
+            {path: {id: ENV["INPUT_USERNAME_ID"]}, value: ENV["USERNAME"]},
+            {path: {id: ENV["INPUT_PASSWORD_ID"]}, value: ENV["PASSWORD"]}
         ]
         button_id = ENV["SUBMIT_BTN"]
         credentials.each do |element|

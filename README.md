@@ -9,21 +9,28 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'network_connector'
+    gem install network_connector
+```
+## Usage
+Once the gem installed you'll need to set your credentials in order to have access to the network.
+You'll need to create an env file name under your user home. 
+the name should be ~/.network_informations ou ~/.network_informations.env ou ~/network_informations ou ~/network_informations.env
+The content should be the following: 
+```env
+    USERNAME=<your-username>
+    PASSWORD=<your-password>
+    HAS_CONFIRMATION=true  
+    HOST=<your-username>
+    INPUT_USERNAME_ID=user.username
+    INPUT_PASSWORD_ID=user.password
+    SUBMIT_BTN=<html id fo the button>
+    CONFIRMATION_BTN=<html id of the confirmation button>
 ```
 
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install network_connector
-
-## Usage
-
-TODO: Write usage instructions here
-
+Once it is done you can type the following command to connect to the network
+```bash
+    $ workconnektor
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

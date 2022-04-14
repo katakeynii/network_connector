@@ -12,9 +12,9 @@ RuboCop::RakeTask.new
 task default: %i[spec rubocop]
 
 GEM_NAME = "network_connector"
-GEM_VERSION = "0.1.0"
+GEM_VERSION = NetworkConnector::VERSION
 
-task :default => :build
+# task :default => :build
 
 task :build do
   system "gem build " + GEM_NAME + ".gemspec"
